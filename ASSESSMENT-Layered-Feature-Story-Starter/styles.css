@@ -70,6 +70,7 @@ a:hover {
 /* Feature header */
 
 .feature-header {
+    position: relative;
     padding: clamp(2rem, 6vw, 5rem);
     background: #e9ddd0;
     border-bottom: 1px solid var(--color-border);
@@ -89,7 +90,9 @@ a:hover {
 }
 
 .issue-badge {
-    display: inline-block;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
     padding: 0.5rem 0.8rem;
     background: var(--color-action);
     color: white;
@@ -202,8 +205,19 @@ figcaption {
         grid-template-columns: 14rem minmax(0, 1fr);
         align-items: start;
     }
+    .story-guide {
+        position: sticky;
+        top: 1rem;
+        align-self: start;
+        z-index: var(--layer-sticky);
+    }
     .documentation {
         grid-column: 1 / -1;
+    }
+    .pull-quote {
+        position: relative;
+        margin-left: -2rem;
+        z-index: var(--layer-raised);
     }
 }
 
@@ -213,4 +227,11 @@ figcaption {
 :focus-visible {
     outline: 3px solid var(--color-action);
     outline-offset: 4px;
+}
+
+@media (max-width: 51.99rem) {
+    .issue-badge {
+        position: static;
+        margin-top: 1rem;
+    }
 }

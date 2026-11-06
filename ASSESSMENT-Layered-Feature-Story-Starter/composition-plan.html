@@ -1,59 +1,86 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>Composition Plan</title>
-        <style>
-            body{
-                font-family:Arial,sans-serif;
-                line-height:1.5;
-                max-width:90rem;
-                margin:auto;
-                padding:1rem;
-                color:#191919;
-                }
-            table{
-                width:100%;
-                border-collapse:collapse;
-                }
-            th,td{
-                padding:.6rem;
-                border:1px solid #999;
-                text-align:left;
-                vertical-align:top;
-                }
-            th{
-                background:#f1f1f1;
-                }
-        </style>
-        </head>
-        <body>
-            <h1>L6 · Composition Plan</h1>
-            <p>Complete one row for every positioned, layered, clipped, rounded, or shape-wrapped element. Duplicate rows as needed.</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Element</th>
-                        <th>Content purpose</th>
-                        <th>Normal-flow baseline</th>
-                        <th>Chosen technique and why</th>
-                        <th>Containing block / stacking context</th>
-                        <th>Fallback or disengagement</th>
-                        <th>Required test</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Example only</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                    </tr>
-                </tbody>
-            </table>
-        </body>
-        </html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Composition Plan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            max-width: 90rem;
+            margin: auto;
+            padding: 1rem;
+            color: #191919;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th,
+        td {
+            padding: .6rem;
+            border: 1px solid #999;
+            text-align: left;
+            vertical-align: top;
+        }
+        
+        th {
+            background: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>L6 · Composition Plan</h1>
+    <p>Complete one row for every positioned, layered, clipped, rounded, or shape-wrapped element. Duplicate rows as needed.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Element</th>
+                <th>Content purpose</th>
+                <th>Normal-flow baseline</th>
+                <th>Chosen technique and why</th>
+                <th>Containing block / stacking context</th>
+                <th>Fallback or disengagement</th>
+                <th>Required test</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>Issue badge</td>
+                <td>Shows the Afterhours issue number.</td>
+                <td>Appears after the introduction.</td>
+                <td>Absolute positioning anchors it to the header.</td>
+                <td>The relative feature-header is its containing block.</td>
+                <td>Returns to normal flow below 52rem.</td>
+                <td>Check 320px, 768px, 1280px and long titles.</td>
+            </tr>
+            <tr>
+                <td>Story navigation</td>
+                <td>Helps readers jump between sections.</td>
+                <td>Appears before the article.</td>
+                <td>Sticky positioning keeps links visible on desktop.</td>
+                <td>The main grid container bounds the sticky element.</td>
+                <td>Normal flow below 52rem.</td>
+                <td>Test scrolling, boundaries and keyboard focus.</td>
+            </tr>
+            <tr>
+                <td>Pull quote</td>
+                <td>Highlights the main message of the story.</td>
+                <td>Appears between article paragraphs.</td>
+                <td>Relative positioning and negative margin create overlap.</td>
+                <td>The quote remains in the article's normal flow.</td>
+                <td>No overlap below 52rem.</td>
+                <td>Test responsive widths, zoom and longer content.</td>
+            </tr>
+
+        </tbody>
+    </table>
+</body>
+
+</html>
