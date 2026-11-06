@@ -21,9 +21,13 @@
             <a href="#section-one">More Than a Genre</a>
             <a href="#section-two">The Feeling of Discovery</a>
         </aside>
+
         <article>
+            <h2>Finding Beauty in the Noise</h2>
+
             <section id="section-one">
                 <h2>L2–L3 · More Than a Genre</h2>
+
                 <figure class="feature-figure">
                     <img src="feature.svg" alt="Abstract illustration used for the Afterhours indie music feature" width="1000" height="700">
                     <figcaption>Afterhours feature artwork. Illustration supplied with the assessment starter; temporary artwork until the final image is chosen.</figcaption>
@@ -31,6 +35,7 @@
                 <p>Indie music has always been difficult to fit into one category. Some people think of soft guitar songs and quiet vocals, while others picture loud concerts, experimental sounds, or bands recording music in their bedrooms. The word originally
                     described music released independently from major record labels, but it has also become a way to describe a certain sound and attitude. For many listeners, indie music is less about following a strict definition and more about finding
                     something that feels genuine.</p>
+
 
                 <p>Part of what makes indie music interesting is that artists can approach familiar ideas in unexpected ways. A song about heartbreak might sound dreamy instead of sad. A simple guitar melody can feel more memorable than a complicated production.
                     Even an imperfect recording can add character because it reminds listeners that real people are behind the music. Those small details often become the reason someone plays a song again and again.</p>
@@ -121,7 +126,9 @@
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/shape-outside">shape-outside</a></li>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/shape-margin">shape-margin</a></li>
             </ul>
-
+            <h3>CSS Validator Errors</h3>
+            <p> The W3C CSS Validator reported three errors related to `shape-outside` and `shape-margin`. These are valid modern CSS properties, but the selected validator profile did not recognize them. I kept these properties because they are required
+                for the editorial text wrap and tested their behavior in Chrome DevTools.</p>
             <h3>Fallback Design</h3>
             <p>
                 The website uses normal document flow and CSS Grid for its main layout. If clip-path is disabled, the feature image returns to a rectangular shape. If shape-outside is disabled, the text still wraps around the portrait using a regular float. On smaller
@@ -135,14 +142,75 @@
 
             <h3>AI Disclosure</h3>
             <p>
-                I used ChatGPT to help organize the assignment, write the article content, and work through the HTML and CSS changes. I also used it to help understand positioning, layering, and CSS shapes. I reviewed the changes and tested the website as I worked through
-                each commit.
+                I used ChatGPT to help organize the assignment, rewrite the article content to sound cohesive and profesional, and work through the HTML and CSS changes. I also used it to help understand positioning, layering, and CSS shapes. I reviewed the changes and
+                tested the website as I worked through each commit.
             </p>
 
-            <h3>Testing Record</h3>
-            <p>
-                Testing will include the following checks:
-            </p>
+
+
+            <h3>Final Testing Record</h3>
+            <p>Tests completed: November 5, 2026.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Test</th>
+                        <th>Result</th>
+                        <th>Evidence</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Responsive layout</td>
+                        <td>Pass</td>
+                        <td>
+                            <a href="testing/mobile-320.png">320px</a> |
+                            <a href="testing/tablet-768.png">768px</a> |
+                            <a href="testing/desktop-1280.png">1280px</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Positioning and layers</td>
+                        <td>Pass</td>
+                        <td>
+                            <a href="testing/sticky-navigation.png">Sticky Navigation</a> |
+                            <a href="testing/keyboard-focus.png">Keyboard Focus</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Shapes and fallbacks</td>
+                        <td>Pass</td>
+                        <td>
+                            <a href="testing/clip-enhanced.png">Clip Enhanced</a> |
+                            <a href="testing/clip-fallback.png">Clip Fallback</a> |
+                            <a href="testing/shape-enhanced.png">Shape Enhanced</a> |
+                            <a href="testing/shape-fallback.png">Shape Fallback</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Content growth</td>
+                        <td>Pass</td>
+                        <td>
+                            <a href="testing/content-growth.png">Content Growth</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>HTML and CSS validation</td>
+                        <td>Completed - CSS validator reported 3 property errors</td>
+                        <td>
+                            <a href="testing/validation.png">HTML Validation</a> |
+                            <a href="testing/css-validation.png">CSS Validation</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
             <ul>
                 <li>HTML and CSS validation</li>
                 <li>CSS-disabled reading order</li>
