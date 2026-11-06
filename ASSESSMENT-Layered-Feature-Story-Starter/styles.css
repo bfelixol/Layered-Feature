@@ -98,6 +98,7 @@ a:hover {
     color: white;
     border-radius: var(--radius);
     font-size: 0.85rem;
+    z-index: var(--layer-raised);
 }
 
 
@@ -218,6 +219,7 @@ figcaption {
         position: relative;
         margin-left: -2rem;
         z-index: var(--layer-raised);
+        pointer-events: none;
     }
 }
 
@@ -227,6 +229,11 @@ figcaption {
 :focus-visible {
     outline: 3px solid var(--color-action);
     outline-offset: 4px;
+}
+
+.story-guide a:focus-visible {
+    background: var(--color-surface);
+    border-radius: 4px;
 }
 
 @media (max-width: 51.99rem) {
