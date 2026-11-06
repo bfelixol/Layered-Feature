@@ -79,6 +79,36 @@
                 <td>Test responsive widths, zoom and longer content.</td>
             </tr>
 
+            <tr>
+                <td>Rounded feature container</td>
+                <td>Frames the main Afterhours artwork.</td>
+                <td>A rectangular figure with an image and caption.</td>
+                <td>Border-radius softens the edges and matches the design.</td>
+                <td>Normal flow; no new stacking context.</td>
+                <td>Square corners remain readable if unsupported.</td>
+                <td>Check image edges at all viewport sizes.</td>
+            </tr>
+
+            <tr>
+                <td>Clipped feature image</td>
+                <td>Adds an angled editorial appearance.</td>
+                <td>The full image displays as a rectangle.</td>
+                <td>Clip-path creates a subtle angled crop.</td>
+                <td>The image stays inside its figure.</td>
+                <td>The @supports rule preserves the rectangular image.</td>
+                <td>Disable clip-path and check that the image remains visible.</td>
+            </tr>
+
+            <tr>
+                <td>Portrait text wrap</td>
+                <td>Connects the artwork with the article text.</td>
+                <td>The image appears above the paragraphs.</td>
+                <td>Float and shape-outside create a circular text wrap.</td>
+                <td>The float remains inside its article section.</td>
+                <td>Rectangular float fallback on desktop; normal flow on mobile.</td>
+                <td>Disable shape-outside and test 320px, 768px, and 1280px.</td>
+            </tr>
+
         </tbody>
     </table>
 </body>

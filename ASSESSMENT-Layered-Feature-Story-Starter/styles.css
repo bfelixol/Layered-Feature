@@ -155,6 +155,7 @@ img {
     border: 1px solid var(--color-border);
     border-radius: var(--radius);
     background: #fffaf4;
+    overflow: hidden;
 }
 
 .feature-figure img {
@@ -184,9 +185,26 @@ figcaption {
 /* Portrait */
 
 .shape-portrait {
+    display: block;
     width: min(100%, 18rem);
-    margin-bottom: 1rem;
-    border-radius: var(--radius);
+    height: auto;
+    margin: 0 1.5rem 1rem 0;
+    border-radius: 50%;
+}
+
+
+/* L5 - Editorial text wrapping */
+
+@media (min-width: 52rem) {
+    .shape-portrait {
+        float: left;
+    }
+    @supports (shape-outside: circle(50%)) {
+        .shape-portrait {
+            shape-outside: circle(50%);
+            shape-margin: 1rem;
+        }
+    }
 }
 
 
@@ -240,5 +258,14 @@ figcaption {
     .issue-badge {
         position: static;
         margin-top: 1rem;
+    }
+}
+
+
+/* L5 - Clipped feature artwork */
+
+@supports (clip-path: polygon(0 0)) {
+    .feature-figure img {
+        clip-path: polygon( 0 0, 100% 4%, 96% 100%, 4% 96%);
     }
 }
