@@ -269,3 +269,38 @@ figcaption {
         clip-path: polygon( 0 0, 100% 4%, 96% 100%, 4% 96%);
     }
 }
+
+
+/* L6 - Documentation table */
+
+.documentation table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+.documentation th,
+.documentation td {
+    border: 1px solid var(--color-border);
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.documentation th {
+    background: #e9ddd0;
+}
+
+.documentation a {
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 40rem) {
+    .documentation {
+        overflow-x: auto;
+    }
+    .documentation th,
+    .documentation td {
+        padding: 0.4rem;
+        font-size: 0.85rem;
+    }
+}

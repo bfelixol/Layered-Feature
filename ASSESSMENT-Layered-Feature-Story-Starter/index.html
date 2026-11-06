@@ -68,10 +68,97 @@
                     that means something to you might come from an artist with millions of listeners or someone recording in a bedroom. Either way, the feeling of finding it is worth holding onto.</p>
             </section>
         </article>
+
         <section class="documentation">
             <h2>L6 · Documentation and Testing</h2>
-            <p><a href="composition-plan.html">View the composition plan</a>. Browser tests, CSS support notes, final artwork credits, and AI disclosure will be added in later commits.</p>
+
+            <h3>Composition Plan</h3>
+            <p>
+                <a href="composition-plan.html">
+            View the composition plan
+        </a>
+            </p>
+
+            <h3>CSS Browser Support</h3>
+            <p>MDN compatibility information checked on November 5, 2026.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>CSS Feature</th>
+                        <th>Support</th>
+                        <th>Fallback</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>border-radius</td>
+                        <td>Widely supported</td>
+                        <td>Square corners</td>
+                    </tr>
+                    <tr>
+                        <td>clip-path</td>
+                        <td>Widely supported</td>
+                        <td>Rectangular image</td>
+                    </tr>
+                    <tr>
+                        <td>shape-outside</td>
+                        <td>Widely supported for basic shapes</td>
+                        <td>Rectangular text wrap</td>
+                    </tr>
+                    <tr>
+                        <td>shape-margin</td>
+                        <td>Widely supported</td>
+                        <td>Regular float spacing</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>MDN References</h3>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/border-radius">border-radius</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/clip-path">clip-path</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/shape-outside">shape-outside</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/shape-margin">shape-margin</a></li>
+            </ul>
+
+            <h3>Fallback Design</h3>
+            <p>
+                The website uses normal document flow and CSS Grid for its main layout. If clip-path is disabled, the feature image returns to a rectangular shape. If shape-outside is disabled, the text still wraps around the portrait using a regular float. On smaller
+                screens, the portrait returns to normal flow.
+            </p>
+
+            <h3>Content and Image Credits</h3>
+            <p>
+                The Afterhours article was created for this assignment. The feature and portrait illustrations came from the provided assessment starter files.
+            </p>
+
+            <h3>AI Disclosure</h3>
+            <p>
+                I used ChatGPT to help organize the assignment, write the article content, and work through the HTML and CSS changes. I also used it to help understand positioning, layering, and CSS shapes. I reviewed the changes and tested the website as I worked through
+                each commit.
+            </p>
+
+            <h3>Testing Record</h3>
+            <p>
+                Testing will include the following checks:
+            </p>
+            <ul>
+                <li>HTML and CSS validation</li>
+                <li>CSS-disabled reading order</li>
+                <li>320px, 768px, and 1280px screen widths</li>
+                <li>200% zoom and keyboard navigation</li>
+                <li>Long titles and doubled paragraph content</li>
+                <li>Sticky navigation boundaries</li>
+                <li>Layered link interaction and stacking contexts</li>
+                <li>clip-path and shape-outside fallbacks</li>
+            </ul>
+            <p>
+                Final results and screenshots will be documented after browser testing.
+            </p>
+
         </section>
+
     </main>
 </body>
 
